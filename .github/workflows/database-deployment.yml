@@ -8,7 +8,8 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
-      server_type: null
+      server_type:
+      description: "Selecione o tipo de banco de dados"
       required: true
       default: SqlServer
       type: choice
