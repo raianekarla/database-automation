@@ -9,9 +9,14 @@ on:
   workflow_dispatch:
     inputs:
       server_type:
-        description: "Selecione o tipo de banco de dados (SqlServer, Oracle, Postgres ou MySql)"
         required: true
         default: SqlServer
+        type: choice
+        options:
+          - SqlServer
+          - Oracle
+          - Postgres
+          - MySql
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
