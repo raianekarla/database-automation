@@ -44,6 +44,7 @@ jobs:
           ls -l
 
           sed 's/password=/password="${{ secrets.DB_USER }}"/' secrets.yml
+          sed 's/.secret-file/.secret-file="${{ secrets.DB_USER }}"/' dotfile.secret.yml
           cat s
           
       # Runs a set of commands using the runners shell
