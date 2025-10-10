@@ -42,6 +42,9 @@ jobs:
           echo "DB_USER: ${{ secrets.DB_USER }}"
           pwd
           ls -l
+
+          sed 's/password=/password="${{ secrets.DB_USER }}"/' secrets.yml
+          cat s
           
       # Runs a set of commands using the runners shell
       - name: Verificar se é SqlServer
