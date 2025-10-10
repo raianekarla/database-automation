@@ -39,7 +39,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          ping www.google.com
+          echo "DB_USER: ${{ secrets.DB_USER }}"
           pwd
           ls -l
           
