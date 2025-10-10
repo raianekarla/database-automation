@@ -39,7 +39,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          ping 8.8.8.8
+          ping www.google.com
           pwd
           ls -l
           
