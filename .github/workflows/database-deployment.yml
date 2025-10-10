@@ -41,3 +41,12 @@ jobs:
           echo test, and deploy your project.
           pwd
           ls -l
+          
+      # Runs a set of commands using the runners shell
+      - name: Verificar se é SqlServer
+        run: |
+          if [ "${{ github.event.inputs.server_type }}" == "SqlServer" ]; then
+            echo "Servidor é SQL Server!"
+          else
+            echo "Servidor NÃO é SQL Server. É: ${{ github.event.inputs.server_type }}"
+          fi
